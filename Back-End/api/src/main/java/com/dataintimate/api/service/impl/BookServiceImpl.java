@@ -7,9 +7,13 @@ import com.dataintimate.api.exception.NotFoundException;
 import com.dataintimate.api.repo.BookRepo;
 import com.dataintimate.api.service.BookService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -39,5 +43,12 @@ public class BookServiceImpl implements BookService {
     @Override
     public String getId() {
         return bookRepo.getId();
+    }
+
+    @Override
+    public ArrayList<ResponseBookDto> getAllBooks() {
+        List<Book> all=bookRepo.findAll();
+       return modelMapper.map(all,new TypeToken<ArrayList<ResponseBookDto>>(){}.getType());
+
     }
 }

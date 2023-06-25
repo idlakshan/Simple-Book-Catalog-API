@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @RestController
 @CrossOrigin
@@ -40,8 +41,6 @@ public class BookController {
         );
 
     }
-
-
 
     @PostMapping(path = "image",consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public StandardResponse uploadImage(@RequestPart("bookImg") MultipartFile bookImg) {
@@ -71,6 +70,13 @@ public class BookController {
         );
     }
 
+    @GetMapping
+    public ResponseEntity<StandardResponse> getAllBooks(){
+        ArrayList<ResponseBookDto> allBooks = bookService.getAllBooks();
+        return new ResponseEntity<>(new StandardResponse(200,"Book List...!",allBooks),
+                HttpStatus.OK
+        );
+    }
 
 
 }
