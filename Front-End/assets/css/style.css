@@ -129,6 +129,10 @@ body{
     width: 300px;
 }
 
+#id{
+    width: 150px;
+}
+
 .success {
     border-color: #04AA6D;
     color: green;
@@ -177,9 +181,10 @@ table{
     width: 85%;
     max-height: calc(89% - 1.6rem);
     background-color: #fffb;
-    margin: 0.8rem auto;
+    margin: 0.8rem  auto;
     border-radius: 0.6rem;
     overflow: auto;
+
 }
 
 table,th,td{
@@ -227,10 +232,10 @@ tbody tr:hover{
     }
     .pic{
         width: 30%;
-        height: 35%;
+        height: 30%;
         top: 80%;
         right: 38%;
-        bottom: 40%;
+        bottom: 20%;
         border: 1px solid sienna;
 
     }
@@ -256,7 +261,7 @@ tbody tr:hover{
         top: 80%;
         right: 40%;
         bottom: 40%;
-
+        border: 1px solid sienna;
     }
 }
 
@@ -274,11 +279,19 @@ tbody tr:hover{
         font-size: .8rem;
     }
     .btn{
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: 0.1rem;
         padding: 4px 30px;
         margin-bottom: 15px;
 
+    }
+    .pic{
+        width: 50%;
+        height: 40%;
+        top: 60%;
+        right: 25%;
+        bottom: 30%;
+        border: 1px solid sienna;
     }
 
 }
@@ -303,16 +316,16 @@ tbody tr:hover{
 
     .form{
         width: 82vw;
-        height: 90vh;
+        height: 100vh;
     }
 
     .pic{
         width: 60%;
         height: 25%;
-        top: 80%;
+        top: 75%;
         right: 20%;
-        bottom: 40%;
-
+        bottom: 10%;
+        border: 1px solid sienna;
     }
     .btn{
         font-size: 0.8rem;
@@ -335,15 +348,15 @@ tbody tr:hover{
 @media (max-width: 400px) {
     .form{
         width: 82vw;
-        height: 100vh;
+        height: 115vh;
     }
     .pic{
-        width: 40%;
+        width: 50%;
         height: 18%;
         top: 90%;
-        right: 30%;
+        right: 25%;
         bottom: 40%;
-
+        border: 1px solid sienna;
     }
 
 

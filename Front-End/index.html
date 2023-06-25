@@ -13,41 +13,40 @@
     <main>
         <div class="form">
               <div class="input-fields">
+                  <div id="id" class="input-box">
+                      <input id="txtId" type="text" required name="id"/>
+                      <span>ID</span>
+                  </div>
+
                   <div class="input-box">
-                      <input type="text" required/>
+                      <input id="txtTitle" type="text" required name="title"/>
                       <span>Title</span>
                   </div>
 
                   <div class="input-box">
-                      <input type="text" required/>
+                      <input id="txtAuthor" type="text" required name="author"/>
                       <span>Author</span>
                   </div>
 
                   <div id="edition" class="input-box">
-                      <input type="text" required/>
+                      <input id="txtEdition" type="text" required name="edition"/>
                       <span>Edition</span>
                   </div>
 
                   <div id="qty" class="input-box">
-                      <input type="text" required/>
+                      <input id="txtQty" type="text" required name="qty"/>
                       <span>Qty</span>
                   </div>
 
                   <div id="price" class="input-box">
-                      <input type="number" required/>
+                      <input id="txtPrice" type="number" required name="price"/>
                       <span>Price</span>
                   </div>
               </div>
 
-
-
-           <!-- <div class="btnSaveUpdate-area">
-                <button class="btn info" id="btnSaveUpdate" >Save</button>
-            </div>-->
-
             <div class="btnSaveUpdate-area" >
                 <div id="file" class="input-box">
-                    <input type="file" required />
+                    <input id="txtFile" type="file" required name="bookImg" />
                     <span></span>
                 </div>
                 <div style="padding-left: 25px">
@@ -68,9 +67,6 @@
                 </div>
 
             </div>
-
-
-
 
         </div>
 
@@ -248,6 +244,7 @@
 
 </section>
 
-
+<script src="assets/js/JQuery/jquery-3.6.1.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
