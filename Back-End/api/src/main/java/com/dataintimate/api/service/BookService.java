@@ -15,4 +15,6 @@ public interface BookService {
 
     ArrayList<ResponseBookDto> getAllBooks();
 
+    void deleteBook(String id);
+
 }

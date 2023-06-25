@@ -183,5 +183,18 @@ function loadData(){
 }
 
 function deleteBook(id){
-    console.log(id);
+   // console.log(id);
+
+    if (confirm("Are you Sure..")){
+        $.ajax({
+            url: "http://localhost:8090/api/v1/books?id="+id,
+            method:"delete",
+            dataType:"json",
+            success:function (res){
+                loadData();
+                createNewId();
+            }
+        });
+    }
+
 }

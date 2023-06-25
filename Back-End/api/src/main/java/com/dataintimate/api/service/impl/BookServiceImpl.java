@@ -51,4 +51,15 @@ public class BookServiceImpl implements BookService {
        return modelMapper.map(all,new TypeToken<ArrayList<ResponseBookDto>>(){}.getType());
 
     }
+
+    @Override
+    public void deleteBook(String id) {
+        if (bookRepo.existsById(id)) {
+            bookRepo.deleteById(id);
+            return;
+
+        } else {
+            throw new NotFoundException("Not a Book Found");
+        }
+    }
 }

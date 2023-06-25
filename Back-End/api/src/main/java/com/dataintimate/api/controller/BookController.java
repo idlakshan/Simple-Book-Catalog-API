@@ -78,5 +78,14 @@ public class BookController {
         );
     }
 
+    @DeleteMapping(params = "id")
+    public ResponseEntity<StandardResponse> deleteBook(@RequestParam String id){
+
+        bookService.deleteBook(id);
+
+        return new ResponseEntity<>(new StandardResponse(204,"book Deleted..",null),
+                HttpStatus.NO_CONTENT
+        );
+    }
 
 }
